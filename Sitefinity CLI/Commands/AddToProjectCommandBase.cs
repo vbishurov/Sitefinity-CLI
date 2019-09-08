@@ -158,10 +158,6 @@ namespace Sitefinity_CLI.Commands
                     var folderPath = Path.GetDirectoryName(fileModel.FilePath);
 
                     var data = this.GetTemplateData(Path.GetDirectoryName(fileModel.TemplatePath));
-                    data["toolName"] = Constants.CLIName;
-                    data["version"] = this.AssemblyVersion;
-                    data["name"] = this.Name;
-                    data["pascalCaseName"] = this.PascalCaseName;
 
                     if (!Directory.Exists(folderPath))
                     {
@@ -181,6 +177,14 @@ namespace Sitefinity_CLI.Commands
             }
 
             return (int)ExitCode.OK;
+        }
+
+        protected override void AddAdditionalTemplateData(Dictionary<string, string> data)
+        {
+            data["toolName"] = Constants.CLIName;
+            data["version"] = this.AssemblyVersion;
+            data["name"] = this.Name;
+            data["pascalCaseName"] = this.PascalCaseName;
         }
 
         /// <summary>
@@ -252,7 +256,7 @@ namespace Sitefinity_CLI.Commands
         /// </summary>
         /// <param name="s">The string</param>
         /// <returns>TheString</returns>
-        private string GetPascalCase(string s)
+        protected string GetPascalCase(string s)
         {
             s = Regex.Replace(s, @"[^A-Za-z.]", " ", RegexOptions.IgnoreCase);
 

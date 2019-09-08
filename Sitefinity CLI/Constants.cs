@@ -27,6 +27,8 @@ namespace Sitefinity_CLI
         public const string IntegrationTestClassName = "DemoTests";
         public const string PackagesFileName = "packages";
         public const string CsProjTemplateName = "csproj";
+        public const string AdminAppExtensionsBundleTemplatesFolderName = "AdminAppExtensionsBundle";
+        public const string AdminAppExtensionTemplatesFolderName = "AdminAppExtension";
 
         // Paths
         public static string PageTemplatesPath = Path.Combine("MVC", "Views", "Layouts");
@@ -34,6 +36,7 @@ namespace Sitefinity_CLI
 
         // Error messages
         public const string DirectoryNotFoundMessage = "Directory not found. Path: \"{0}\"";
+        public const string AdminAppExtensionsBundleNotFoundMessage = "AdminApp extensions bundle with name {0} not found. Path: \"{1}\". You can create it by running: sf add extensionsbundle {2}";
         public const string FileExistsMessage = "File \"{0}\" already exists. Path: \"{1}\"";
         public const string TemplateNotFoundMessage = "The {0} you want to replicate is not found. Path: \"{1}\"";
         public const string ResourceExistsMessage = "{0} with name {1} already exists. Path: \"{2}\"";
@@ -62,9 +65,12 @@ namespace Sitefinity_CLI
         public const string ModuleCreatedMessage = "Module \"{0}\" created!";
         public const string IntegrationTestsCreatedMessage = "Integration tests project \"{0}\" created!";
         public const string AddFilesToSolutionSuccessMessage = "File \"{0}\" succesfully added to solution!";
+        public const string AdminAppExtensionsBundleCreatedMessage = "AdminApp Extensions Bundle \"{0}\" created!";
+        public const string AdminAppExtensionCreatedMessage = "AdminApp Extension \"{0}\" created!";
 
         // Descriptions
         public const string TemplateNameOptionDescription = "The name of the file you want to replicate. Default value: ";
+        public const string BundleNameOptionDescription = "The name of the bundle you want to add the extension to. Default value: ";
         public const string DescriptionOptionDescription = "The description of your module";
         public const string ResourcePackageOptionDescription = "The name of the resource package where you want to add the generated resource. Default value: ";
         public const string ProjectRoothPathOptionDescription = "The path to the root of the project where the command will execute.";
@@ -72,6 +78,7 @@ namespace Sitefinity_CLI
         public const string NameArgumentDescription = "The name of the resource you want to add to the current project.";
         public const string TemplateNameOptionTemplate = "-t|--template";
         public const string DescriptionOptionTemplate = "-d|--description";
+        public const string BundleNameOptionTemplate = "-b|--bundle";
 
         // File extensions
         public const string RazorFileExtension = ".cshtml";
@@ -97,11 +104,17 @@ namespace Sitefinity_CLI
         public const string AddIntegrationTestsCommandName = "tests";
         public const string AddIntegrationTestsCommandFullName = "Integration tests project";
         public const string GenerateConfigCommandName = "config";
+        public const string AddAdminAppExtensionCommandName = "extension";
+        public const string AddAdminAppExtensionCommandFullName = "AdminApp Extension";
+        public const string AddAdminAppExtensionsBundleCommandName = "extensionsbundle";
+        public const string AddAdminAppExtensionsBundleCommandFullName = "AdminApp Extensions Bundle";
 
         public const string DefaultResourcePackageName_VersionsBefore12_0 = "Bootstrap";
         public const string DefaultResourcePackageName = "Bootstrap4";
         public const string DefaultGridWidgetName = "grid-6+6";
         public const string DefaultSourceTemplateName = "Default";
+        public const string DefaultAdminAppExtensionName = "Grid";
+        public const string DefaultAdminAppExtensionsBundleName = "Sample";
 
         // cs proj modifier constants
         public const string ItemGroupElem = "ItemGroup";

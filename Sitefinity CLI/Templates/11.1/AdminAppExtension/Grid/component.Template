@@ -1,0 +1,18 @@
+import { Component, OnInit } from "@angular/core";
+import { DataContextComponent, DataContext } from "progress-sitefinity-adminapp-sdk/app/api/v1";
+
+/**
+ * A custom component to be displayed in each cell in a specific column in the grid.
+ */
+@Component({
+    templateUrl: "./{{componentKebabCaseName}}.component.html"
+})
+export class {{componentPascalCaseName}}Component implements OnInit, DataContextComponent {
+
+    // This context is automatically set for each component instantiated in the grid.
+    // It holds metadata that includes the data item for the current row and the column model as well.
+    context: DataContext;
+
+    ngOnInit() {
+    }
+}

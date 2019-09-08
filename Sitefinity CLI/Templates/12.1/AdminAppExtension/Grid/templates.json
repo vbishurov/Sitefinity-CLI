@@ -1,0 +1,18 @@
+[
+  {
+    "FilePath": "columns-provider.ts",
+    "TemplatePath": "provider.Template"
+  },
+  {
+    "FilePath": "{0}.component.ts",
+    "TemplatePath": "component.Template"
+  },
+  {
+    "FilePath": "{0}.component.html",
+    "TemplatePath": "component-Markup.Template"
+  },
+  {
+    "FilePath": "index.ts",
+    "TemplatePath": "index.Template"
+  }
+]

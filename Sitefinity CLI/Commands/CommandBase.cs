@@ -211,7 +211,14 @@ namespace Sitefinity_CLI.Commands
                 }
             }
 
+            this.AddAdditionalTemplateData(data);
+
             return data;
+        }
+
+        protected virtual void AddAdditionalTemplateData(Dictionary<string, string> data)
+        {
+
         }
     }
 }

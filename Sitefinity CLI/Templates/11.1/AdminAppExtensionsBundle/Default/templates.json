@@ -1,0 +1,10 @@
+[
+  {
+    "FilePath": "config\\constants.js",
+    "TemplatePath": "config\\constants.Template"
+  },
+  {
+    "FilePath": "__extensions_index.ts",
+    "TemplatePath": "index.Template"
+  }
+]

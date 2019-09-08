@@ -1,0 +1,17 @@
+import { NgModule } from "@angular/core";
+import { {{componentPascalCaseName}}Component } from "./{{componentKebabCaseName}}.component";
+import { COLUMNS_PROVIDER } from "./columns-provider";
+
+@NgModule({
+    declarations: [
+        {{componentPascalCaseName}}Component
+    ],
+    entryComponents: [
+        // The component needs to be registered here as it is instantiated dynamically.
+        {{componentPascalCaseName}}Component
+    ],
+    providers: [
+        COLUMNS_PROVIDER
+    ]
+})
+export class {{pascalCaseName}}Module { /* empty */ }
